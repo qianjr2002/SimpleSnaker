@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add *)",
+      "Bash(git commit -m 'feat: 重构贪吃蛇游戏 - 分离CSS/JS、难度选择、生命系统 *)"
+    ]
+  }
+}

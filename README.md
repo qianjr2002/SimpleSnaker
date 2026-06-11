@@ -1,45 +1,47 @@
-# SimpleSnaker
+# 🐍 SimpleSnaker
 
-## originindex.html
+一个使用原生 HTML5 Canvas 实现的贪吃蛇游戏，无需任何外部依赖，打开即玩。
 
-[originindex.html](https://github.com/SpongeBob-hmbb/SimpleSnaker/blob/main/originindex.html)
+## 🎮 玩法
 
-这是最初始版本！十分简陋，后续会进行修改
+- 使用 **方向键** 或 **WASD** 控制蛇的移动方向
+- 吃到红色食物即可增加分数，蛇身会变长
+- 随着分数提高，游戏速度会逐渐加快
+- 撞到墙壁或自己的身体即游戏结束
 
-该版本的问题：
+### 快捷键
 
-1. 图形位置未在中央
-2. 界面色泽单调
-3. ……
+| 按键 | 功能 |
+|------|------|
+| `↑` `↓` `←` `→` / `W` `A` `S` `D` | 控制方向 |
+| `空格` | 暂停 / 继续 |
+| `R` | 重新开始 |
 
-## index1.html
+## ✨ 特性
 
-[index1.html](https://github.com/SpongeBob-hmbb/SimpleSnaker/blob/main/index1.html)
+- 🎨 现代暗色 UI 设计，带渐变背景和发光特效
+- 📊 实时分数显示，自动保存最高纪录（LocalStorage）
+- 🍎 智能食物生成，不会出现在蛇身上
+- ⚡ 动态难度：每吃 5 个食物自动加速
+- ⏸️ 支持暂停/继续
+- 🖥️ 居中布局，适配各种屏幕
 
-这是第二版本！
+## 🚀 快速开始
 
-做了什么
+直接在浏览器中打开 `index.html` 即可开始游戏。
 
-1. 将图形界面放在中央
-2. 增加了界面的颜色，对界面进行了一些美化处理
+## 📸 预览
 
-该版本的问题：
+![screenshot](screenshot.png)
 
-1. 没有分数记录
-2. 失败后刷新不够流畅
-3. 食物有可能随机出现在蛇的身上，导致bug
-4. ……
+## 📁 项目结构
 
-[index2.html](https://github.com/SpongeBob-hmbb/SimpleSnaker/blob/main/index2.html)
+```
+SimpleSnaker/
+├── index.html    # 游戏主文件
+└── README.md     # 项目说明
+```
 
-这是第三版本！
+## 📄 License
 
-做了什么
-
-1. 修复了：食物有可能随机出现在蛇的身上，导致的bug
-
-该版本的问题：
-
-1. 没有分数记录
-2. 失败后刷新不够流畅
-3. ……
+MIT

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>贪吃蛇 - SimpleSnaker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="game-container">
+        <!-- 分数面板 -->
+        <div class="game-header">
+            <div class="score-box">
+                <div class="score-label">当前分数</div>
+                <div class="score-value" id="score">0</div>
+            </div>
+            <div class="lives-box">
+                <div class="lives-label">生命</div>
+                <div class="lives-value" id="livesDisplay">❤️❤️❤️❤️</div>
+            </div>
+            <div class="best-box">
+                <div class="best-label">最高纪录</div>
+                <div class="best-value" id="bestScore">0</div>
+            </div>
+        </div>
+
+        <!-- 难度选择 -->
+        <div class="difficulty-bar" id="difficultyBar">
+            <button class="difficulty-btn easy" data-level="easy">🟢 简单</button>
+            <button class="difficulty-btn normal active" data-level="normal">🟠 一般</button>
+            <button class="difficulty-btn hard" data-level="hard">🔴 困难</button>
+        </div>
+
+        <!-- 画布 -->
+        <div class="canvas-wrapper" style="position: relative;">
+            <canvas id="myCanvas" width="480" height="480"></canvas>
+            <div class="pause-hint" id="pauseHint">已暂停</div>
+        </div>
+
+        <!-- 操作提示 -->
+        <div class="game-footer">
+            <kbd>↑</kbd> <kbd>↓</kbd> <kbd>←</kbd> <kbd>→</kbd> 或 <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> 控制方向 &nbsp;|&nbsp;
+            <kbd>空格</kbd> 暂停 / 继续 &nbsp;|&nbsp;
+            <kbd>R</kbd> 重新开始
+        </div>
+    </div>
+
+    <!-- 开始游戏弹窗 -->
+    <div class="start-overlay active" id="startOverlay">
+        <div class="start-dialog">
+            <h2>🐍 贪吃蛇</h2>
+            <p class="start-subtitle">选择难度，准备好后点击开始</p>
+            <button class="start-btn" id="startBtn">开始游戏</button>
+            <p class="start-hint">或按 <kbd>空格</kbd> 开始</p>
+        </div>
+    </div>
+
+    <!-- 游戏结束弹窗 -->
+    <div class="game-over-overlay" id="gameOverOverlay">
+        <div class="game-over-dialog">
+            <h2>游戏结束</h2>
+            <div class="final-score" id="finalScore">0</div>
+            <div class="cause" id="causeText"></div>
+            <button class="restart-btn" id="restartBtn">再来一局</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
